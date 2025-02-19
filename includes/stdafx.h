@@ -2,6 +2,8 @@
 
 #include <gtk/gtk.h>
 
+void Sysprintf(const char * text, ...);
+
 struct _QE_BrusherGUI_Table_{
     GtkWidget * g_pMainFrame; //main window
     GtkWidget * g_pCamWnd; //camwnd
