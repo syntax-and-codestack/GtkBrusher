@@ -9,7 +9,19 @@ public:
  int g_pGameId;
 
  enum{
-
+    HalfLife,
+    HalfLifeII,
+    CounterStrikeSource,
+    TitanFall,
+    TitanFallII,
+    Quake,
+    QuakeII,
+    QuakeIIIArena,
+    Doom,
+    CallOfDutyModernWarfare09,
+    Portal,
+    SolderofFortune,
+    AliensVsPredatorII
  }GamePak;
 
 };
