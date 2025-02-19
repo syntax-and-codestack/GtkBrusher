@@ -67,3 +67,5 @@ public:
  winding_t();
   int numpoints[8][5];
 };
+
+qboolean q_eBrushPrimitMode;
