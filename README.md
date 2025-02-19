@@ -1,5 +1,3 @@
-# GtkBrusher
-
  GtkBrusher
 ============
 
