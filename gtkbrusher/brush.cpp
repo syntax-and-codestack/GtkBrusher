@@ -13,3 +13,20 @@ bnumberid = b->g_nBrushId++;
  }
 return cBuff;
 };
+
+//alloc brush
+brush_t * Alloc_Brush(brush_t * b){
+ brush_t * brush = (brush_t*)malloc(sizeof(*b));
+ return b = AllocBrush( b );
+};
+
+#include <set>
+
+//set size
+std::size_t BrushSet( brush_t * b ){
+ std::set<brush_t> brush;
+  if(b){
+   brush.begin(), brush.end();
+  }
+  BrushSet( b );
+};
