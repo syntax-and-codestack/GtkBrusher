@@ -52,6 +52,10 @@ public:
 class brush_t{
 public:
  brush_t();
+ 
+ brush_t ** next;
+ brush_t * prev;
+ brush_t& current;
 
   vec3 maxs;
   vec3 mins;
