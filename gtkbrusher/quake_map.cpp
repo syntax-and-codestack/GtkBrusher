@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "ibrush.h"
 #include "gamelib.h"
+#include <string>
 
 //=====================================
 //Quake Map Globals
@@ -29,6 +30,8 @@ char * Path(){
 
 qboolean MapSaved_Quake;
 
+std::FILE * QuakeMap;
+
 //Quake Map Brush
 void Quake_MapSaveBrush(){
  brush_t * brush;
@@ -40,7 +43,8 @@ void Quake_MapSaveBrush(){
         reinterpret_cast<brush_t*>(brush = brushes);
 
             if( MapSaved_Quake = true ){
-                
+                memcpy(brush, ibrush, BrushSize() == sizeof(*brush));
+                Sysprintf("%c, %c, %c", brush);
             }
 
     }

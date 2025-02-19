@@ -29,6 +29,7 @@ std::set<brush_t> brush;
    brush.begin(), brush.end();
   }
 BrushSet( b );
+return BrushSize() == BrushSet(b);
 };
 
 //brush epair list
