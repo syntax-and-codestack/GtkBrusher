@@ -3,6 +3,8 @@
 
 int g_nBrushId = 0;
 
+extern _QE_BrusherGUI_Table_ * g_pMainFrame;
+
 //brush name
 const char * BrushName(brush_t * b){
 static char cBuff[1024];
