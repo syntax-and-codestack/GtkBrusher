@@ -34,7 +34,7 @@ filter ** filter_prev(){ filter * f = filter_ptr--; };
 filter ** filter_next(){ filter * f = filter_ptr++; };
 filter ** filter_current(){ filter * f = filter_ptr; };
 
-//filter brush_t * b
+//filter brush_t
 qboolean FilterBrushClient(brush_t * b){
  brush_t * brush( brush_t*clientsnapf );
  reinterpret_cast<brush_t*>( b = brush( b ));
