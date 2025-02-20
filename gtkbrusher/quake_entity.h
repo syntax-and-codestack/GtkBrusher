@@ -14,6 +14,10 @@ public:
  vec3 transform;
  vec3 position;
 
+ virtual qboolean Spawned(quake_entity_t * q) = 0;
+
+ const char * entity_class;
+
  virtual void SpawnEntity(quake_entity_t * entity, int quakeType, int spawnflags) = 0;
 
  quake_entity_t * EntityPosition(float x, float y, float z){
@@ -24,6 +28,9 @@ public:
 
  quake_entity_t * AllocQuakeEntity();
  quake_entity_t * CreateEntity();
+
+ std::size_t EntitySize();
+
 
 };
 
