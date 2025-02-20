@@ -4,6 +4,8 @@
 
 #include "stdafx.h"
 
+void Reinterpret_QuakeAddress();
+
 class quake_entity_t{
 public:
  quake_entity_t();

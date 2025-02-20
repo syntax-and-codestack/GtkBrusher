@@ -21,3 +21,9 @@ quake_entity_t * AllocQuakeEntity(){
  quake_entity_t * entity = (quake_entity_t*)malloc(sizeof(*entity));
  return entity = AllocQuakeEntity();
 };
+
+//reinterpret quake adress
+void Reinterpret_QuakeAddress(){
+ quake_entity_t * quake;
+ reinterpret_cast<quake_entity_t*>(quake);
+};
