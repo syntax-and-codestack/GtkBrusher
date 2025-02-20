@@ -38,29 +38,21 @@ void Quake_MapSaveBrush(){
  brush_t * brush;
  IBrush * ibrush;
  GameLibPak * quake;
-
  std::string QuakePath;
-
     while( Extension( quake ) ){
         brush->g_nBrushId == ibrush->eBrushType == ibrush->eQuakeBrush;
         reinterpret_cast<brush_t*>(brush = brushes);
-
             if( MapSaved_Quake = true ){
                 memcpy(brush, ibrush, BrushSize() == sizeof(*brush));
                 Sysprintf("%c, %c, %c", brush);
                 (name) + (*Extension(quake));
-
                 QuakePath.find((name) && + (*Extension(quake)));
                 QuakePath.find(Path());
-
                     if( QuakePath.find(Path()) ){
                      static char SaveBuffer[2048];
                      //fix later possibly
                      g_key_file_save_to_file(NULL, (name) + (*Extension(quake)), NULL);
                     }
-
             }
-
-    }
-    
+    } 
 };
