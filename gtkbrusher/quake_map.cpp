@@ -6,6 +6,7 @@
 #include "ibrush.h"
 #include "gamelib.h"
 #include <string>
+#include <fstream>
 
 //=====================================
 //Quake Map Globals
@@ -18,7 +19,7 @@ char c_map_path[1024];
 //Quake Map Extension
 const char * Extension(GameLibPak * game){
  if( game->g_pGameId == game->Quake ){
-    return "*.map";
+    return ".map";
  }
 };
 
@@ -38,6 +39,8 @@ void Quake_MapSaveBrush(){
  IBrush * ibrush;
  GameLibPak * quake;
 
+ std::string QuakePath;
+
     while( Extension( quake ) ){
         brush->g_nBrushId == ibrush->eBrushType == ibrush->eQuakeBrush;
         reinterpret_cast<brush_t*>(brush = brushes);
@@ -45,6 +48,17 @@ void Quake_MapSaveBrush(){
             if( MapSaved_Quake = true ){
                 memcpy(brush, ibrush, BrushSize() == sizeof(*brush));
                 Sysprintf("%c, %c, %c", brush);
+                (name) + (*Extension(quake));
+
+                QuakePath.find((name) && + (*Extension(quake)));
+                QuakePath.find(Path());
+
+                    if( QuakePath.find(Path()) ){
+                     static char SaveBuffer[2048];
+                     //fix later possibly
+                     g_key_file_save_to_file(NULL, (name) + (*Extension(quake)), NULL);
+                    }
+
             }
 
     }
