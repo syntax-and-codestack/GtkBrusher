@@ -85,3 +85,8 @@ return Quake_NullEntDefModule( quake, entity );
 const char * QuakeActor_Extension(){
  return ".mdl";
 };
+
+//free quake entity
+quake_entity_t * QuakeFree_Entity(){
+ free( QuakeFree_Entity( ) );
+};
