@@ -5,12 +5,14 @@
 #include "stdafx.h"
 #include "ibrush.h"
 #include "gamelib.h"
+#include "quake_entity.h"
 #include <string>
 #include <fstream>
 
 //=====================================
 //Quake Map Globals
 extern brush_t * brushes;
+extern quake_entity_t * entities;
 
 const char * name;
 const char * extension;

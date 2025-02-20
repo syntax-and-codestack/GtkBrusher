@@ -3,6 +3,8 @@
 #include "eclass.h"
 #include "quake_entity.h"
 
+#define QUAKE_TYPE 000
+
 int m_mMaxQuakeId = 0;
 eclass * epair;
 
@@ -68,4 +70,18 @@ switch( quake->quakentid ){
     return 34;
   }
 }
+return QUAKE_TYPE;
+};
+
+//quake entity isn't an actor
+void Quake_NullEntDefModule(quake_entity_t * quake, eclass * entity){
+ if( quake->entity_class != entity->actor ){
+  static_cast<int>(*QuakeEntityName(quake));//make static entity
+ }
+return Quake_NullEntDefModule( quake, entity );
+};
+
+//model format *quake actor model*
+const char * QuakeActor_Extension(){
+ return ".mdl";
 };
