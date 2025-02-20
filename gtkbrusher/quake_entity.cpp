@@ -19,15 +19,16 @@ m_mMaxQuakeId = quake->quakentid++;
 };
 
 //alloc quake entity
+//memory adress of quake entity
 quake_entity_t * AllocQuakeEntity(){
  quake_entity_t * entity = (quake_entity_t*)malloc(sizeof(*entity));
  return entity = AllocQuakeEntity();
 };
 
-//reinterpret quake adress
+//reinterpret quake adress *!new quake entity address!*
 void Reinterpret_QuakeAddress(){ quake_entity_t * quake; reinterpret_cast<quake_entity_t*>(quake);};
 
-//quake entity type
+//quake entity type *!append entity type!*
 int QuakeEntity_Type(quake_entity_t * quake, const char * type, eclass * edef){
 if(quake->entity_class == edef->actor){
   efind.data() == edef->actor;
@@ -76,12 +77,12 @@ return QUAKE_TYPE;
 //quake entity isn't an actor
 void Quake_NullEntDefModule(quake_entity_t * quake, eclass * entity){
  if( quake->entity_class != entity->actor ){
-  static_cast<int>(*QuakeEntityName(quake));//make static entity
+  static_cast<int>(*QuakeEntityName(quake));//make static entity *!static can't move in 3D world
  }
-return Quake_NullEntDefModule( quake, entity );
+return Quake_NullEntDefModule( quake, entity );//return the module
 };
 
-//model format *quake actor model*
+//model format *!quake actor model!*
 const char * QuakeActor_Extension(){
- return ".mdl";
+ return ".mdl";//quake model format
 };
