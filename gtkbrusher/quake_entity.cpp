@@ -84,14 +84,10 @@ return Quake_NullEntDefModule( quake, entity );//return the module
 
 //model format *!quake actor model!*
 const char * QuakeActor_Extension(){
-<<<<<<< HEAD
  return ".mdl";
 };
 
 //free quake entity
 quake_entity_t * QuakeFree_Entity(){
  free( QuakeFree_Entity( ) );
-=======
- return ".mdl";//quake model format
->>>>>>> origin/HEAD
 };
