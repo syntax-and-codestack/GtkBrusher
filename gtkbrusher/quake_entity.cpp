@@ -23,7 +23,49 @@ quake_entity_t * AllocQuakeEntity(){
 };
 
 //reinterpret quake adress
-void Reinterpret_QuakeAddress(){
- quake_entity_t * quake;
- reinterpret_cast<quake_entity_t*>(quake);
+void Reinterpret_QuakeAddress(){ quake_entity_t * quake; reinterpret_cast<quake_entity_t*>(quake);};
+
+//quake entity type
+int QuakeEntity_Type(quake_entity_t * quake, const char * type, eclass * edef){
+if(quake->entity_class == edef->actor){
+  efind.data() == edef->actor;
+}
+
+if( quake->entity_class == edef->worldspawn ){
+  efind.data() == edef->worldspawn;
+}
+
+if( quake->entity_class == edef->scriptbrush ){
+  efind.data() == edef->scriptbrush;
+}
+
+if( quake->entity_class == edef->scriptmodel ){
+  efind.data() == edef->scriptmodel;
+}
+
+switch( quake->quakentid ){
+  case 14:
+   edef->actor;
+  break;
+
+  if( quake->quakentid = 14){
+    return 14;
+  }
+
+  case 24:
+   edef->scriptmodel;
+  break;
+
+  if( quake->quakentid = 24){
+    return 24;
+  }
+
+  case 34:
+   edef->scriptbrush;
+  break;
+  
+  if( quake->quakentid = 34 ){
+    return 34;
+  }
+}
 };
