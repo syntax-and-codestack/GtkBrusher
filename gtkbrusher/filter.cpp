@@ -1,6 +1,6 @@
 
 #include "brush.h"
-#include "Filter.h"
+#include "filter.h"
 #include "stdafx.h"
 #include "quake_entity.h"
 #include "eclass.h"
