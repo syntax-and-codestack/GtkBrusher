@@ -78,9 +78,19 @@ qboolean FilterQuakeEntity(quake_entity_t * quake){
  return true;
 };
 
+//hold the filters
+int ss_FilterStapleTable[17]{
+  BrushFilter_Flags, EntityFilter_Flags, ClipFilter_Flags,
+  ClipMonsterFilter_Flags, ClipPlayerFilter_Flags, CaulkFilter_Flags,
+  NoDrawFilter_Flags, PortalFilter_Flags, TriggerFilter_Flags,
+  VolumeFilter_Flags, LightGridFilter_Flags, SkyBoxFilter_Flags,
+  LadderFilter_Flags, SkipFilter_Flags, HintFilter_Flags,
+  ClipTerrianFilter_Flags
+};
+
 void ConstructBFilterDlg(){
  if( FILTER_ASSERT_COMMAND ){
-  FilterDlg = dlg;
+
  }
 };
 
