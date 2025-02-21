@@ -1,4 +1,4 @@
-//grid.cpp programmed by hunter manko
+//grid.h programmed by hunter manko
 #define MAX_GRID_SIZE
 
 //grid dimesion stipples
@@ -27,4 +27,22 @@ const char * grid_menu_stipple[6]{
  "Grid 32/n", "Grid 164/n"
 };
 
-int id;
+//snap to grid label for menu
+const char * grid_snap_label = "snap to grid/n";
+
+//grid view labels
+const char * grid_view_label[3]{
+ "XY", 
+ "YZ",
+ "XZ"
+};
+
+//grid sizes
+enum{
+ GRID_8 = 0x8,
+ GRID_16 = 0x16,
+ GRID_32 = 0x32,
+ GRID_64 = 0x64,
+ GRID_128 = 0x128,
+ GRID_164 = 0x164
+}grid_power_size;
