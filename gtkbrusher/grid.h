@@ -1,6 +1,8 @@
 //grid.h programmed by hunter manko
 #define MAX_GRID_SIZE
 
+#include "stdafx.h"
+
 //grid dimesion stipples
 const char * ss_grid_stipple[32]{
  "0", "64", "128",
@@ -39,10 +41,46 @@ const char * grid_view_label[3]{
 
 //grid sizes
 enum{
- GRID_8 = 0x8,
- GRID_16 = 0x16,
- GRID_32 = 0x32,
- GRID_64 = 0x64,
- GRID_128 = 0x128,
- GRID_164 = 0x164
+  GRID_8 = 0x8,
+  GRID_16 = 0x16,
+  GRID_32 = 0x32,
+  GRID_64 = 0x64,
+  GRID_128 = 0x128,
+  GRID_164 = 0x164
 }grid_power_size;
+
+int g_nGridPower;
+
+void DrawBrush();
+void DrawEntity();
+void DrawPoint( int point );
+
+int GridBackground_Color();
+
+void Grid_Set();
+
+qboolean Enable_Snap();
+
+enum{
+    XY = 0x0,
+    YZ = 0x1,
+    XZ = 0x2
+}GridView;
+
+int g_nSetGridView;
+
+void Zoom();
+
+qboolean ZoomIn();
+qboolean ZoomOut();
+
+qboolean g_nDrawBrush();
+qboolean g_nDrawEntity();
+qboolean g_nDragBrush();
+
+int g_nGridPen;
+int g_nGlGridLineColor;
+int g_nGlGridBlockColor;
+int g_nGlGridTextColor;
+
+GtkWidget * g_pMainView_SetViews(GtkWidget * xy, GtkWidget * yz, GtkWidget * xz);
