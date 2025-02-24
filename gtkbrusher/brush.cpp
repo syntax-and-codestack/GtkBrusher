@@ -18,7 +18,7 @@ return cBuff;
 
 //alloc brush
 brush_t * Alloc_Brush(brush_t * b){
- brush_t * brush = (brush_t*)malloc(sizeof(*b));
+ brush_t * brush = ( brush_t * )malloc(sizeof( * b ));
  return b = AllocBrush( b );
 };
 
@@ -50,3 +50,35 @@ qboolean FreeBrush( brush_t * b ){
 Sysprintf("Brush %i free");
 return SelectBrush( b ) == false;
 };
+
+//clamp
+float Clamp( brush_t * b, int cmp ){
+ float frac = Clamp( b, cmp );
+ int c = static_cast<int>(Clamp( b, cmp )) % c;
+return frac;
+};
+
+//free brush
+void brush_free( brush_t * brush ){
+  free( brush );
+};
+
+//buffer the brush
+brush_t * BufferBrush( brush_t * b ){
+          static char buffer[2048];
+              if( b->prev ){
+                memcpy(b->next, buffer, BrushSet(b++));
+                sprintf(buffer, "%c, %brush_t\n", b->g_nBrushId++);
+              }
+    return b++;
+};
+
+//select the brush
+qboolean SelectBrush( brush_t * b ){ 
+        if( true != !SelectBrush(b) ){
+           for( b; b->next; b != b->prev--, b->next++ && b->sides ){
+               b++;
+           }
+        }
+}
+
