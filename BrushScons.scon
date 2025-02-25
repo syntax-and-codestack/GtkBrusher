@@ -1,0 +1,18 @@
+--SCON-BUILD-DIR--$GTKBRUSHER{
+    -build $path = $"GTKBRUSHER/.pak"
+    -build $path = $"GTKBRUSHER/gtk"
+    -build $path = $"GTKBRUSHER/gtkbrusher"
+    -build $path = $"GTKBRUSHER/includes"
+    -build $path = $"GTKBRUSHER/libs"
+    -build $files = $"cpp, c, h, hpp, scon, .pak, png, jpg, ico, o, xml"
+
+     -mkdir $from -$path[--SCON-BUILD-DIR--$GTKBRUSHER] = $dir = "GTKBRUSHER/installs"
+
+      -dir $mkfile = $<GtkBrusher.exe>
+      -dir $mkdir = $"base"
+      -dir $cdir = $"base"
+      -dir $load-dir-files = $"png, jpg"
+
+      -cdir $path[--SCON-BUILD-DIR--$GTKBRUSHER]
+      -dir $version-branch = $"1.0 - Release - X64"
+}
