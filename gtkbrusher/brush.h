@@ -15,4 +15,6 @@ qboolean HighlightBrush(brush_t *b);
 
 std::size_t BrushSize();
 
+brush_t * BrushMake_Face( brush_t * b );
+
 const char * BrushSet_Epair(brush_t * b, const char * key, const char * value);

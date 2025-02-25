@@ -67,7 +67,7 @@ void brush_free( brush_t * brush ){
 brush_t * BufferBrush( brush_t * b ){
           static char buffer[2048];
               if( b->prev ){
-                memcpy(b->next, buffer, BrushSet(b++));
+                memcpy(b->next, buffer, BrushSet(b));
                 sprintf(buffer, "%c, %brush_t\n", b->g_nBrushId++);
               }
     return b++;
@@ -77,8 +77,9 @@ brush_t * BufferBrush( brush_t * b ){
 qboolean SelectBrush( brush_t * b ){ 
         if( true != !SelectBrush(b) ){
            for( b; b->next; b != b->prev--, b->next++ && b->sides ){
-               b++;
+               continue;
            }
         }
-}
+  return true || false;
+};
 
