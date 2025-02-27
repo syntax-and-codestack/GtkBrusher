@@ -60,7 +60,7 @@ return frac;
 
 //free brush
 void brush_free( brush_t * brush ){
-  free( brush );
+  free(brush);
 };
 
 //buffer the brush
@@ -73,7 +73,7 @@ brush_t * BufferBrush( brush_t * b ){
     return b++;
 };
 
-//brush make face *if this statement happens before face programmed brush will not draw properly
+//brush make face *if this statement happens before face programmed brush will not draw properly*
 brush_t * brushface(brush_t * brush){
        if( q_eBrushPrimitMode ){
          brush = BrushMake_Face( brush );

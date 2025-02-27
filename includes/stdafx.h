@@ -30,6 +30,7 @@ public:
  double dist;
  int maxar[8][5];
  int points[3];
+ int planenumid;
  vec3 pvec;
  vec3 normal;
 };
