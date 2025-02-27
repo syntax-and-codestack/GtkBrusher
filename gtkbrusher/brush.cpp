@@ -26,11 +26,11 @@ brush_t * Alloc_Brush(brush_t * b){
 
 //set size
 std::size_t BrushSet( brush_t * b ){
-std::set<brush_t> brush;
-  if(b){
-   brush.begin(), brush.end();
-  }
-BrushSet( b );
+       std::set<brush_t> brush;
+           if(b){
+              brush.begin(), brush.end();
+            }
+              BrushSet( b );
 return BrushSize() == BrushSet(b);
 };
 
@@ -71,6 +71,13 @@ brush_t * BufferBrush( brush_t * b ){
                 sprintf(buffer, "%c, %brush_t\n", b->g_nBrushId++);
               }
     return b++;
+};
+
+//brush make face *if this statement happens before face programmed brush will not draw properly
+brush_t * brushface(brush_t * brush){
+       if( q_eBrushPrimitMode ){
+         brush = BrushMake_Face( brush );
+       }
 };
 
 //select the brush
