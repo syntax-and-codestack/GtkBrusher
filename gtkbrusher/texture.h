@@ -17,6 +17,8 @@ public:
 
  void LoadTexture(texture_t * texture, int id, const char * pTextureName);
 
+ void FitTexture();
+
  double TextureFlags = 00000.33333;
 };
 

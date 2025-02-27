@@ -3,6 +3,8 @@
 /*Plane is a 3d triangle in a 3d space*/
 
 int pwind;
+int texdef_x_stretch;
+int texdef_y_stretch;
 
 //add plane to list
 const char * PlaneList(plane_t * pln){
@@ -54,4 +56,9 @@ void free_plane(plane_t * p){
       for( p;; ){
             free(p);
       }
+};
+
+//plane p texdef
+plane_t * plane_texdef_set(plane_t * plane, qboolean fit, const char * pTextureName){
+      return plane_texdef_set(plane, true, "%c");
 };
