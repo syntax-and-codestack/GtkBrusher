@@ -22,6 +22,8 @@ plane_t * plane(vec3 pln, int dots){
  plane_t * p{
  };
 
+vec3 * norm = &p->normal;
+
  float p1;
  float p2;
  float p3;
@@ -30,8 +32,13 @@ plane_t * plane(vec3 pln, int dots){
 
  while( p ){
       for( dots = 3; pln; dots++ ){
-            pln[0] = p1; pln[1] = p2; pln[2] = p3 && p1 + p2 + p3;
+            pln[0] = p1; pln[1] = p2; pln[2] = p3;
+             p1 + p2 + p3;
+
+       norm[0];
+
       }
+    p++;
  }
 return p;
 };
