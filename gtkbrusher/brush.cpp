@@ -37,6 +37,12 @@ std::size_t BrushSet( brush_t * b ){
 return BrushSize() == BrushSet(b);
 };
 
+//free sizeof brush
+brush_t * freebrush_size(){
+        brush_t * brush = NULL;
+        free(brush = Alloc_Brush(brush));//free the sizeof brush
+};
+
 //brush epair list
 brush_t * BrushEpairLst(brush_t * b){
  for( b; b->next; b++){
