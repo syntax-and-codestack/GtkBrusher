@@ -1,5 +1,6 @@
 //brush.cpp programmed by hunter manko
 #include "brush.h"
+#include <list>
 
 int g_nBrushId = 0;
 
@@ -22,15 +23,17 @@ brush_t * Alloc_Brush(brush_t * b){
  return b = AllocBrush( b );
 };
 
+//mem leak brush
+brush_t * brushMemLeak(brush_t * b){
+ if(!Alloc_Brush(b)){
+   delete b;
+ }
+};
+
 #include <set>
 
 //set size
 std::size_t BrushSet( brush_t * b ){
-       std::set<brush_t> brush;
-           if(b){
-              brush.begin(), brush.end();
-            }
-              BrushSet( b );
 return BrushSize() == BrushSet(b);
 };
 
